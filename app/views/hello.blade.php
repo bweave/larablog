@@ -30,12 +30,21 @@
 
 <!-- ANGULAR JS APP -->
 <script src="{{ asset('app/scripts/app.js') }}"></script>
+<script src="{{ asset('app/scripts/routes.js') }}"></script>
+<script src="{{ asset('app/scripts/config/auth-interceptor.js') }}"></script>
+<script src="{{ asset('app/scripts/config/config.js') }}"></script>
 <script src="{{ asset('app/scripts/controllers/main.js') }}"></script>
 <script src="{{ asset('app/scripts/controllers/about.js') }}"></script>
 <script src="{{ asset('app/scripts/services/blogservice.js') }}"></script>
+<script src="{{ asset('app/scripts/services/authservice.js') }}"></script>
+<script src="{{ asset('app/scripts/services/flashservice.js') }}"></script>
+<script src="{{ asset('app/scripts/controllers/login.js') }}"></script>
 <script src="{{ asset('app/scripts/controllers/posts.js') }}"></script>
 <script src="{{ asset('app/scripts/controllers/single.js') }}"></script>
 <script src="{{ asset('app/scripts/controllers/blog.js') }}"></script>
 <script src="{{ asset('app/scripts/controllers/new.js') }}"></script>
 <script src="{{ asset('app/scripts/controllers/edit.js') }}"></script>
+<script>
+    angular.module('jsApp').constant('CSRF_TOKEN', '{{ csrf_token() }}');
+</script>
 @stop

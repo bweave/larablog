@@ -16,7 +16,8 @@
             <ul class="nav navbar-nav">
                 <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
                 <li ui-sref-active="active"><a ui-sref="about">About</a></li>
-                <li ui-sref-active="active"><a ui-sref="blog.posts">Blog</a></li>
+                <li ng-if="sessionStorage.authenticated" ui-sref-active="active"><a ui-sref="blog.posts">Blog</a></li>
+                <li ng-if="! sessionStorage.authenticated" ui-sref-active="active"><a ui-sref="login">Login</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>

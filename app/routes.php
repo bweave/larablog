@@ -6,3 +6,9 @@ Route::get('/', function()
 });
 
 Route::resource('posts', 'PostsController');
+
+Route::group(array('prefix' => 'service'), function() {
+
+    Route::resource('authenticate', 'SessionsController', ['only' => ['index', 'store']]);
+
+});
