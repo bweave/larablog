@@ -8,8 +8,20 @@
  * Controller of the jsApp
  */
 angular.module('jsApp')
-  .controller('BlogCtrl', function ($scope, BlogPost) {
-    var posts = BlogPost.query(function () {
+  .controller('BlogCtrl', function ($scope, $state, BlogPost, Authenticate) {
+    var posts;
+
+    if (! sessionStorage.authenticated){
+      $state.go('home');
+    }
+
+    posts = BlogPost.query(function () {
       $scope.posts = posts;
     });
+
+    $scope.logout = function (){
+        Authenticate.get({},function(){
+            $state.go('home');
+        });
+    };
   });
