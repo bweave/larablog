@@ -2,12 +2,12 @@
 
 class SessionsController extends \BaseController {
 
-	/**
+    /**
 	 * Logs a user in
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function login()
 	{
 		$creds = [
             'email' =>  Input::get('email'),
@@ -15,9 +15,14 @@ class SessionsController extends \BaseController {
         ];
 
         if ( Auth::attempt($creds) ) {
-            return Response::json(['user' => Auth::user()->toArray()], 202);
+            return Response::json([
+                'user' => Auth::user()->toArray(),
+                'flash' => ['flashMessage' => 'Successfully logged in!', 'flashClass' => 'success']
+            ], 200);
         }else{
-            return Response::json(['flash' => 'Check your credentials and try again.'], 401);
+            return Response::json([
+                'flash' => ['flashMessage' => 'Check your credentials and try again.', 'flashClass' => 'danger']
+            ], 401);
         }
 	}
 
@@ -27,10 +32,12 @@ class SessionsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function index()
+	public function logout()
 	{
 		Auth::logout();
-        return Response::json(['flash' => 'Logout Successful'], 200);
+        return Response::json([
+            'flash' => ['flashMessage' => 'Successfully logged out.', 'flashClass' => 'success']
+        ], 200);
 	}
 
 }

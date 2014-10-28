@@ -8,7 +8,8 @@
  * Controller of the jsApp
  */
 angular.module('jsApp')
-  .controller('EditCtrl', function ($scope, $state, BlogPost) {
+  .controller('EditCtrl', function () {
+  // .controller('EditCtrl', function ($scope, $state, BlogPost) {
     // $scope.blogPost = new BlogPost();
 
     // $scope.update = function() {

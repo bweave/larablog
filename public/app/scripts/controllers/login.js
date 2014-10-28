@@ -13,15 +13,18 @@ angular.module('jsApp')
     $scope.flash = undefined;
 
     $scope.login = function() {
-      Authenticate.save({
-          'email': $sanitize($scope.creds.email),
-          'password': $sanitize($scope.creds.password)
-        }, function() {
-            sessionStorage.authenticated = true;
-            $state.go('blog.posts');
-        }, function(resp){
-            Flash.show(resp.data.flash);
-        });
+      Authenticate.attempt({
+        'email': $sanitize($scope.creds.email),
+        'password': $sanitize($scope.creds.password)
+      }).success(function(resp) {
+        console.log(resp);
+        Flash.show(resp.flash.flashMessage, resp.flash.flashClass);
+        sessionStorage.authenticated = true;
+        $state.go('blog.posts');
+      }).error(function(resp) {
+        console.log('ERR: ', resp);
+        Flash.show(resp.flash.flashMessage, resp.flash.flashClass);
+      });
     };
 
   });

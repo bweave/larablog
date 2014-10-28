@@ -8,6 +8,8 @@
 
 <div class="container">
 
+    <div ng-include="'/app/views/partials/_flash.html'"></div>
+
     <!-- This is where the AngularJS magic happens -->
     <div ui-view></div>
 
@@ -31,7 +33,6 @@
 <!-- ANGULAR JS APP -->
 <script src="{{ asset('app/scripts/app.js') }}"></script>
 <script src="{{ asset('app/scripts/routes.js') }}"></script>
-<script src="{{ asset('app/scripts/config/auth-interceptor.js') }}"></script>
 <script src="{{ asset('app/scripts/config/config.js') }}"></script>
 <script src="{{ asset('app/scripts/controllers/main.js') }}"></script>
 <script src="{{ asset('app/scripts/controllers/about.js') }}"></script>

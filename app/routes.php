@@ -9,6 +9,7 @@ Route::resource('posts', 'PostsController');
 
 Route::group(array('prefix' => 'service'), function() {
 
-    Route::resource('authenticate', 'SessionsController', ['only' => ['index', 'store']]);
+    Route::post('authenticate/login', 'SessionsController@login', ['as' => 'login_route']);
+    Route::get('authenticate/logout', 'SessionsController@logout', ['as' => 'logout_route']);
 
 });

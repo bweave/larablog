@@ -8,11 +8,11 @@
  * Controller of the jsApp
  */
 angular.module('jsApp')
-  .controller('BlogCtrl', function ($scope, $state, BlogPost, Authenticate) {
+  .controller('BlogCtrl', function ($scope, $state, BlogPost, Authenticate, Flash) {
     var posts;
 
     if (! sessionStorage.authenticated){
-      $state.go('home');
+      $state.go('login');
     }
 
     posts = BlogPost.query(function () {
@@ -20,8 +20,14 @@ angular.module('jsApp')
     });
 
     $scope.logout = function (){
-        Authenticate.get({},function(){
-            $state.go('home');
+        Authenticate.logout()
+        .success(function(resp) {
+          console.log(resp);
+          Flash.show(resp.flash.flashMessage, resp.flash.flashClass);
+          $state.go('home');
+        })
+        .error(function(resp) {
+          console.log(resp);
         });
     };
   });

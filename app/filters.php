@@ -36,7 +36,7 @@ App::after(function($request, $response)
 Route::filter('serviceAuth', function(){
     if(!Auth::check()){
         return Response::json([
-            'flash' => 'Please login first.'
+            'flash' => ['flashMessage' => 'Please login first.', 'flashClass' => 'danger']
         ], 401);
     }
 });
@@ -44,7 +44,7 @@ Route::filter('serviceAuth', function(){
 Route::filter('serviceCSRF',function(){
     if (Session::token() != Request::header('csrf_token')) {
         return Response::json([
-            'message' => 'I’m a teapot !!! you stupid hacker :D'
+            'message' => 'I’m a teapot!'
         ], 418);
     }
 });
