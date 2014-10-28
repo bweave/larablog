@@ -8,7 +8,7 @@
 
 <div class="container">
 
-    <div ng-include="'/app/views/partials/_flash.html'"></div>
+    <div class="flash-wrap" ng-include="'/app/views/partials/_flash.html'"></div>
 
     <!-- This is where the AngularJS magic happens -->
     <div ui-view></div>
@@ -39,6 +39,7 @@
 <script src="{{ asset('app/scripts/services/blogservice.js') }}"></script>
 <script src="{{ asset('app/scripts/services/authservice.js') }}"></script>
 <script src="{{ asset('app/scripts/services/flashservice.js') }}"></script>
+<script src="{{ asset('app/scripts/controllers/nav.js') }}"></script>
 <script src="{{ asset('app/scripts/controllers/login.js') }}"></script>
 <script src="{{ asset('app/scripts/controllers/posts.js') }}"></script>
 <script src="{{ asset('app/scripts/controllers/single.js') }}"></script>

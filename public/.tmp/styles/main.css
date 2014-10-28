@@ -7998,51 +7998,71 @@ body {
   padding-bottom: 19px;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000339}}
+.flash-msg {
+  transition: all 0.3s ease;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000341}}
+.flash-msg.ng-leave-active {
+  top: -100%;
+  opacity: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000347}}
+#login-form {
+  min-width: 220px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000349}}
+#login-form .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* Custom page footer */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000356}}
 .footer {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000362}}
 .container-narrow > hr {
   margin: 30px 0;
 }
 
 /* Main marketing message and sign up button */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000367}}
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000371}}
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
 }
 
 /* Supporting marketing content */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000378}}
 .marketing {
   margin: 40px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000381}}
 .marketing p + h4 {
   margin-top: 28px;
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000388}}
   .container {
     width: auto;
     max-width: none;
   }
 
   /* Remove the padding we set earlier */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000394}}
   .header,
   .marketing,
   .footer {
@@ -8051,13 +8071,13 @@ body {
   }
 
   /* Space out the masthead */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\00003101}}
   .header {
     margin-bottom: 30px;
   }
 
   /* Remove the bottom border on the jumbotron for visual effect */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\0000389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/brianweaver\/bin\/larablog\/public\/app\/styles\/main\.scss}line{font-family:\00003105}}
   .jumbotron {
     border-bottom: 0;
   }

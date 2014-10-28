@@ -41,12 +41,20 @@ class PostsController extends \BaseController {
 
 		if ($validator->fails())
 		{
-			return Response::json([ 'status' => 'ERR', 'errors' => $validator->messages() ]);
+			return Response::json([
+                'status' => 'ERR',
+                'errors' => $validator->messages(),
+                'flash' => ['flashMessage' => 'Uh-oh! Check your input and try again.', 'flashClass' => 'danger']
+            ]);
 		}
 
 		$post = Post::create($data);
 
-		return Response::json([ 'status' => 'SUCCESS', 'data' => $post ]);
+		return Response::json([
+            'status' => 'SUCCESS',
+            'data' => $post,
+            'flash' => ['flashMessage' => 'Post Created Successfully!', 'flashClass' => 'success']
+        ]);
 	}
 
 	/**
@@ -89,12 +97,20 @@ class PostsController extends \BaseController {
 
 		if ($validator->fails())
 		{
-			return Response::json([ 'status' => 'ERR', 'errors' => $validator->messages() ]);
+			return Response::json([
+                'status' => 'ERR',
+                'errors' => $validator->messages(),
+                'flash' => ['flashMessage' => 'Uh-oh! Check your input and try again.', 'flashClass' => 'danger']
+            ]);
 		}
 
 		$post->update($data);
 
-		return Response::json([ 'status' => 'SUCCESS', 'data' => $post ]);
+		return Response::json([
+            'status' => 'SUCCESS',
+            'data' => $post,
+            'flash' => ['flashMessage' => 'Post Updated Successfully!', 'flashClass' => 'success']
+        ]);
 	}
 
 	/**
@@ -107,10 +123,18 @@ class PostsController extends \BaseController {
 	{
         if (! $post = Post::destroy($id))
         {
-            return Response::json([ 'status' => 'ERR', 'data' => $post ]);
+            return Response::json([
+                'status' => 'ERR',
+                'data' => $post,
+                'flash' => ['flashMessage' => 'Uh-oh! Couldn not delete the post.', 'flashClass' => 'danger']
+            ]);
         }
 
-		return Response::json([ 'status' => 'SUCCESS', 'data' => $post ]);
+		return Response::json([
+            'status' => 'SUCCESS',
+            'data' => $post,
+            'flash' => ['flashMessage' => 'Post Created Successfully!', 'flashClass' => 'success']
+        ]);
 	}
 
 }

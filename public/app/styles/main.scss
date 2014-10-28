@@ -36,6 +36,22 @@ body {
   }
 }
 
+.flash-msg {
+    transition: all 0.3s ease;
+    &.ng-leave-active {
+        top: -100%;
+        opacity: 0
+    }
+}
+
+#login-form {
+    min-width: 220px;
+    .form-group {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
