@@ -16,3 +16,4 @@ Quick CRUD app with auth via a Laravel 4 backend and AngularJS frontend.
 - grunt
 - cd to root of project & php artisan serve
 - open browser @ http://localhost:8000 to view the app
+- login with **admin@admin.com|admin**
